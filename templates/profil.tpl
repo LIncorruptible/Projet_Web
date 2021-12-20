@@ -4,7 +4,7 @@
 <div id='main'>
 <h1>Mon profil</h1>
 <br>
-{if (isset($smarty.session.nom) && isset($smarty.session.nom))}
+{if (isset($smarty.session.prenom) && isset($smarty.session.nom))}
     <h3>Bonjour {$smarty.session.prenom} {$smarty.session.nom}</h3>
 {/if}
 <br>
