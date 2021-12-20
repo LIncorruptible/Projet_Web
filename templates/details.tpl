@@ -8,7 +8,7 @@
 {assign var="FichiersCandidature" value=$FichiersCandidatureGroupe|default:[]}
 {assign var="Membres" value=$MembresGroupe|default:[]}
 <html>
-<link rel="stylesheet" href="templates/styleListe.css">
+<link rel="stylesheet" href="../css/styleListe.css">
 <div id='main'>
 <hr>
 <h1> Candidature du groupe {$Candidature[0].nom}</h1>
@@ -42,12 +42,7 @@
                     <p><b>{$enteteBool} :</b></p>
                 </th>
                 <th class="info">
-                    {if $infoProfilBool == "1"}
-                        Oui
-                    {/if}
-                    {if $infoProfilBool == "0"}
-                        Non
-                    {/if}
+                    {$infoProfilBool}
                 </th>
             </tr>
         {/foreach}
