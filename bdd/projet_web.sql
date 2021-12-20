@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : lun. 20 déc. 2021 à 08:04
+-- Généré le : lun. 20 déc. 2021 à 11:23
 -- Version du serveur : 5.7.33
 -- Version de PHP : 7.4.19
 
@@ -51,6 +51,13 @@ CREATE TABLE `candidature` (
   `fiche_technique` varchar(500) NOT NULL COMMENT 'Fiche technique',
   `doc_sacem` varchar(500) NOT NULL COMMENT 'Document SACEM'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `candidature`
+--
+
+INSERT INTO `candidature` (`id`, `nom`, `departement`, `email`, `style`, `annee`, `presentation`, `experience`, `urlgroupe`, `soundcloud`, `youtube`, `association`, `sacem`, `producteur`, `fichier1`, `fichier2`, `fichier3`, `dossier_presse`, `photo1`, `photo2`, `fiche_technique`, `doc_sacem`) VALUES
+(1, 'ACDC', 'Autre', 'brianjohnson@gmail.com', 'rock', 1973, 'AC/DC est un groupe de hard rock australien constitué à Sydney en 1973 par les frères Angus et Malcolm Young.', 'Les compositions du groupe sont dans la plus pure lignée du blues et du rock\'n\'roll : mesure binaire (très appuyée chez AC/DC), gamme pentatonique (utilisée surtout[1] en blues) et solo de guitare.', 'http://www.ac-dc.wikibis.com/', 'https://www.youtube.com/channel/UCB0JSO6d5ysH2Mmqz5I9rIw', 'https://www.youtube.com/channel/UCB0JSO6d5ysH2Mmqz5I9rIw', 'Oui', 'Oui', 'Oui', 'audio1_1_ACDC.mpeg', 'audio2_1_ACDC.mpeg', 'audio3_1_ACDC.mpeg', 'dossierpresse_1_ACDC.pdf', 'photo1_1_ACDC.jpeg', 'photo2_1_ACDC.jpeg', 'fichetechnique_1_ACDC.pdf', 'docSACEM_1_ACDC.pdf');
 
 -- --------------------------------------------------------
 
@@ -188,6 +195,17 @@ CREATE TABLE `groupe` (
   `instrument` varchar(255) NOT NULL COMMENT 'Instrument du membre'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Déchargement des données de la table `groupe`
+--
+
+INSERT INTO `groupe` (`id_membre`, `id_groupe`, `nom`, `prenom`, `instrument`) VALUES
+(1, 1, 'Johnson', 'Brian', ''),
+(2, 1, 'Young', 'Angus', 'guitar solo'),
+(3, 1, 'Young ', 'Malcolm', 'guitar rythmique'),
+(4, 1, 'Gregg', 'Paul', 'basse'),
+(5, 1, 'Chris ', 'Slade', 'batterie');
+
 -- --------------------------------------------------------
 
 --
@@ -256,6 +274,14 @@ CREATE TABLE `utilisateur` (
   `telephone` int(255) NOT NULL COMMENT 'N° Téléphone',
   `motdepasse` varchar(255) NOT NULL COMMENT 'Mot de passe'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`email`, `type`, `nom`, `prenom`, `adresse`, `code_postal`, `telephone`, `motdepasse`) VALUES
+('brianjohnson@gmail.com', 'candidat', 'Johnson', 'Brian', 'Dunston, Royaume Uni', 99999, 725145689, '$2y$10$vtPHd.VkLpQqu/7qnQRAGOqcRSMnzGoIlR.DfJgmsgFcWb9bAdiSC'),
+('rickastley@gmail.com', 'administrateur', 'Asltey', 'Rick', '-----', 0, 0, 'root123456');
 
 --
 -- Index pour les tables déchargées
