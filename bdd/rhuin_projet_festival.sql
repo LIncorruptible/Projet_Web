@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost:3306
--- Généré le : lun. 20 déc. 2021 à 11:23
--- Version du serveur : 5.7.33
--- Version de PHP : 7.4.19
+-- Host: mysql-rhuin.alwaysdata.net
+-- Generation Time: Dec 20, 2021 at 10:35 PM
+-- Server version: 10.6.5-MariaDB
+-- PHP Version: 7.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `projet_web`
+-- Database: `rhuin_projet_festival`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `candidature`
+-- Table structure for table `candidature`
 --
 
 CREATE TABLE `candidature` (
@@ -50,10 +50,10 @@ CREATE TABLE `candidature` (
   `photo2` varchar(500) NOT NULL COMMENT 'Photo n°2',
   `fiche_technique` varchar(500) NOT NULL COMMENT 'Fiche technique',
   `doc_sacem` varchar(500) NOT NULL COMMENT 'Document SACEM'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
--- Déchargement des données de la table `candidature`
+-- Dumping data for table `candidature`
 --
 
 INSERT INTO `candidature` (`id`, `nom`, `departement`, `email`, `style`, `annee`, `presentation`, `experience`, `urlgroupe`, `soundcloud`, `youtube`, `association`, `sacem`, `producteur`, `fichier1`, `fichier2`, `fichier3`, `dossier_presse`, `photo1`, `photo2`, `fiche_technique`, `doc_sacem`) VALUES
@@ -62,7 +62,7 @@ INSERT INTO `candidature` (`id`, `nom`, `departement`, `email`, `style`, `annee`
 -- --------------------------------------------------------
 
 --
--- Structure de la table `departement`
+-- Table structure for table `departement`
 --
 
 CREATE TABLE `departement` (
@@ -72,10 +72,10 @@ CREATE TABLE `departement` (
   `departement_nom_uppercase` varchar(255) DEFAULT NULL,
   `departement_slug` varchar(255) DEFAULT NULL,
   `departement_nom_soundex` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
--- Déchargement des données de la table `departement`
+-- Dumping data for table `departement`
 --
 
 INSERT INTO `departement` (`departement_id`, `departement_code`, `departement_nom`, `departement_nom_uppercase`, `departement_slug`, `departement_nom_soundex`) VALUES
@@ -184,7 +184,7 @@ INSERT INTO `departement` (`departement_id`, `departement_code`, `departement_no
 -- --------------------------------------------------------
 
 --
--- Structure de la table `groupe`
+-- Table structure for table `groupe`
 --
 
 CREATE TABLE `groupe` (
@@ -193,10 +193,10 @@ CREATE TABLE `groupe` (
   `nom` varchar(255) NOT NULL COMMENT 'Nom du membre',
   `prenom` varchar(255) NOT NULL COMMENT 'Prénom du membre',
   `instrument` varchar(255) NOT NULL COMMENT 'Instrument du membre'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
--- Déchargement des données de la table `groupe`
+-- Dumping data for table `groupe`
 --
 
 INSERT INTO `groupe` (`id_membre`, `id_groupe`, `nom`, `prenom`, `instrument`) VALUES
@@ -209,16 +209,16 @@ INSERT INTO `groupe` (`id_membre`, `id_groupe`, `nom`, `prenom`, `instrument`) V
 -- --------------------------------------------------------
 
 --
--- Structure de la table `scene`
+-- Table structure for table `scene`
 --
 
 CREATE TABLE `scene` (
   `numero` int(255) NOT NULL COMMENT 'Numéro de scène',
   `genre` varchar(255) NOT NULL COMMENT 'Genre de la scène'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
--- Déchargement des données de la table `scene`
+-- Dumping data for table `scene`
 --
 
 INSERT INTO `scene` (`numero`, `genre`) VALUES
@@ -229,16 +229,16 @@ INSERT INTO `scene` (`numero`, `genre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `style_musicaux`
+-- Table structure for table `style_musicaux`
 --
 
 CREATE TABLE `style_musicaux` (
   `numero` int(10) NOT NULL,
   `nom_style` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
--- Déchargement des données de la table `style_musicaux`
+-- Dumping data for table `style_musicaux`
 --
 
 INSERT INTO `style_musicaux` (`numero`, `nom_style`) VALUES
@@ -261,7 +261,7 @@ INSERT INTO `style_musicaux` (`numero`, `nom_style`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `utilisateur`
+-- Table structure for table `utilisateur`
 --
 
 CREATE TABLE `utilisateur` (
@@ -273,74 +273,74 @@ CREATE TABLE `utilisateur` (
   `code_postal` int(255) NOT NULL COMMENT 'Code Postal',
   `telephone` int(255) NOT NULL COMMENT 'N° Téléphone',
   `motdepasse` varchar(255) NOT NULL COMMENT 'Mot de passe'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
--- Déchargement des données de la table `utilisateur`
+-- Dumping data for table `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`email`, `type`, `nom`, `prenom`, `adresse`, `code_postal`, `telephone`, `motdepasse`) VALUES
 ('brianjohnson@gmail.com', 'candidat', 'Johnson', 'Brian', 'Dunston, Royaume Uni', 99999, 725145689, '$2y$10$vtPHd.VkLpQqu/7qnQRAGOqcRSMnzGoIlR.DfJgmsgFcWb9bAdiSC'),
-('rickastley@gmail.com', 'administrateur', 'Asltey', 'Rick', '-----', 0, 0, 'root123456');
+('rickastley@gmail.com', 'administrateur', 'Asltey', 'Rick', '-----', 0, 0, '$2y$10$c9b0ELhDjgBRXQdwOMM3M.Lx02lRRZE7024fKRb22Ojrtck30ckGS');
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `candidature`
+-- Indexes for table `candidature`
 --
 ALTER TABLE `candidature`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `departement`
+-- Indexes for table `departement`
 --
 ALTER TABLE `departement`
   ADD PRIMARY KEY (`departement_id`);
 
 --
--- Index pour la table `scene`
+-- Indexes for table `scene`
 --
 ALTER TABLE `scene`
   ADD PRIMARY KEY (`numero`);
 
 --
--- Index pour la table `style_musicaux`
+-- Indexes for table `style_musicaux`
 --
 ALTER TABLE `style_musicaux`
   ADD PRIMARY KEY (`numero`);
 
 --
--- Index pour la table `utilisateur`
+-- Indexes for table `utilisateur`
 --
 ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`email`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `candidature`
+-- AUTO_INCREMENT for table `candidature`
 --
 ALTER TABLE `candidature`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT COMMENT 'ID du groupe', AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT pour la table `departement`
+-- AUTO_INCREMENT for table `departement`
 --
 ALTER TABLE `departement`
   MODIFY `departement_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 
 --
--- AUTO_INCREMENT pour la table `scene`
+-- AUTO_INCREMENT for table `scene`
 --
 ALTER TABLE `scene`
   MODIFY `numero` int(255) NOT NULL AUTO_INCREMENT COMMENT 'Numéro de scène', AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT pour la table `style_musicaux`
+-- AUTO_INCREMENT for table `style_musicaux`
 --
 ALTER TABLE `style_musicaux`
   MODIFY `numero` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
