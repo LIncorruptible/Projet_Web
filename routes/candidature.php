@@ -50,8 +50,9 @@
                 
                 //Envoie vers la page de candidature détaillée
                 Flight::render('details.tpl', array());
+            } else {
+                Flight::render('index.tpl', array());
             }
-            Flight::render('index.tpl', array());
         }
         else{
             Flight::render('login.tpl', array());
