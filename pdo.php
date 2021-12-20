@@ -1,11 +1,11 @@
 <?php
     /*
         on établie et attrbiut à $db une connection à la base données projet_web :
-            -> utilisateur : root
-            -> mot de passe : Fire2002
+            -> utilisateur : rhuin
+            -> mot de passe : Fire2002@
         en localhost sur le port 3306 respectant la norme utf8
     */
-    $db = new PDO('mysql:host=localhost;port=3306;dbname=projet_web;charset=utf8','root','Fire2002');
+    $db = new PDO('mysql:host=185.31.40.32;port=3306;dbname=rhuin_projet_festival;charset=utf8','rhuin','Fire2002@');
     
     /*
         configure un attribut du gestionnaire de base de données avec :
