@@ -3,7 +3,7 @@
         on établie et attrbiut à $db une connection à la base données projet_web :
             -> utilisateur : rhuin
             -> mot de passe : Fire2002@
-        en localhost sur le port 3306 respectant la norme utf8
+        sur l'IP 185.31.40.32 respectant la norme utf8
     */
     $db = new PDO('mysql:host=185.31.40.32;port=3306;dbname=rhuin_projet_festival;charset=utf8','rhuin','Fire2002@');
     
