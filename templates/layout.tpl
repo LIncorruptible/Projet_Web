@@ -70,8 +70,6 @@
   </div>  
 </div>
 
-
-
 {/block}
 {block name=body}Contenu générique {/block}
 </body>
