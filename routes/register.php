@@ -16,10 +16,6 @@
         $code_postal = $data -> code_postal;
         $telephone = $data -> telephone;
         // récupération des données du tableau $_POST dans des variables
-    
-        $majuscule = preg_match('@[A-Z]@', $mdp);
-	    $minuscule = preg_match('@[a-z]@', $mdp);
-	    $chiffre = preg_match('@[0-9]@', $mdp);
 
         if (empty($nom)){
             $message['nom'] = "Veuillez remplir le champs nom";
@@ -51,6 +47,10 @@
         if(empty($mdp)){
             $message['mdp_vide'] = "Veuillez remplir le champ mot de passe";
         }else{
+            $majuscule = preg_match('@[A-Z]@', $mdp);
+	        $minuscule = preg_match('@[a-z]@', $mdp);
+	        $chiffre = preg_match('@[0-9]@', $mdp);
+            
 	        if(!$majuscule || !$minuscule || !$chiffre || strlen($mdp) < 8){ //vérification que le mot de passe soit plus long que 8 charactères
                 $message['mdp_longueur'] = "Le mot de passe doit être de 8 caractères au minumum contenir au moins un chiffre, une majuscule et une minuscule";
             }
@@ -83,7 +83,7 @@
             $message['code_postal'] = "Veuillez remplir le champ code postal";
         }
         else {
-            if(!$chiffre || strlen($code_postal) != 5 && strlen($code_postal) != 6){
+            if(strlen($code_postal) != 5 && strlen($code_postal) != 6){
                 $message['erreur_code_postal'] = "Le code postal est incorrect";
             }
         }
@@ -92,7 +92,7 @@
             $message['telephone'] = "Veuillez remplir le champ n° téléphone";
         }
         else {
-            if(!$chiffre || strlen($telephone) != 10){
+            if(strlen($telephone) != 10){
                 $message['erreur_telephone'] = "Le numéro de téléphone est incorrect";
             }
         }

@@ -58,7 +58,7 @@
         <br>
         <br>
         <label for="register">Code Postal</label>
-        <input type="text" {if empty($message.code_postal) && empty($message.erreur_code_postal)} class="form-control"{else} class="form-control is-invalid" {/if} value='{$valeurs.code_postal|escape|default:""}' id="code_postal" name="code_postal" aria-describedby="emailHelp" placeholder="Code Postal">
+        <input type="number" {if empty($message.code_postal) && empty($message.erreur_code_postal)} class="form-control"{else} class="form-control is-invalid" {/if} value='{$valeurs.code_postal|escape|default:""}' id="code_postal" name="code_postal" aria-describedby="emailHelp" placeholder="Code Postal">
         <div>{$message.code_postal|escape|default:""}</div><div>{$message.erreur_code_postal|escape|default:""}</div>
         <br>
         <br>
@@ -67,7 +67,7 @@
                 <label for="register">N° téléphone</label>
             </div>
             <div class="col-4">
-                <input type="text" {if empty($message.telephone) && empty($message.erreur_telephone)} class="form-control" {else} class="form-control is-invalid" {/if} value='{$valeurs.telephone|escape|default:""}' id="telephone" name="telephone" placeholder="n° telephone">
+                <input type="number" {if empty($message.telephone) && empty($message.erreur_telephone)} class="form-control" {else} class="form-control is-invalid" {/if} value='{$valeurs.telephone|escape|default:""}' id="telephone" name="telephone" placeholder="n° telephone">
             </div>
         </div>
         <div>{$message.telephone|escape|default:""}</div><div>{$message.erreur_telephone|escape|default:""}</div>
