@@ -1,22 +1,10 @@
 # Projet-Festival
 
-*À noter : Les packages Flight et Smarty sont inclues au dossier `includes`*
-
-## _Connexion à la base de données_
-
-Il faut dans notre cas importer le fichier `projet_web.sql`situer dans le dossier `bdd`, vers ***phpmyadmin*** et renseigner le `root` et `mdp` dans le fichier `pdo.php` situé à la racine du dossier :
-
-* ***Dans le fichier `pdo.php`***
-
-```php
-$db = new PDO('mysql:host=localhost;port=3306;dbname=projet_web;charset=utf8','root','mdp');
-```
+*À noter : Les packages Flight et Smarty sont inclues au dossier `includes`
 
 ## _Connexion et inscription_
 
 ##### Connexion via le role Administrateur :
-
-**(À savoir que son mon de passe n'est pas haché, ce dernier étant rentré dans la base de données en dur)**
 
 * @email : `rickastley@gmail.com`
 * #mdp : `root123456`
