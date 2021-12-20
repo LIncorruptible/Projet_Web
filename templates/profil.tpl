@@ -1,6 +1,7 @@
 {extends file='layout.tpl'}
 {block name=title}Profil{/block}
 {block name=body}
+{assign var="id" value=$IdMembre|default:[]}
 <div id='main'>
 <h1>Mon profil</h1>
 <br>
@@ -23,4 +24,8 @@
 {if (isset($smarty.session.telephone))}
     <div>Telephone : {$smarty.session.telephone}</div>
 {/if}
+{if (isset($smarty.session.nom))}
+    <div><a href="./candidature-{$id}">Ma candidature</a></div>
+{/if} 
+
 {/block}

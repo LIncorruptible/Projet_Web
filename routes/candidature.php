@@ -49,8 +49,9 @@
                 Flight::view()->assign('MembresGroupe', $Membres);
                 
                 //Envoie vers la page de candidature détaillée
-                Flight::render('details.tpl', array());
+                Flight::render('candidatureDetails.tpl', array());
             }
+            Flight::render('index.tpl', array());
         }
         else{
             Flight::render('login.tpl', array());
