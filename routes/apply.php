@@ -89,9 +89,12 @@
         // Département
         if (empty($candidature["departement"])) $erreurs["departement"] = "Veuillez sélectionner un département parmis la liste";
         else {
-            $stmtDep = $BDD->prepare("SELECT departement_nom FROM departement WHERE departement_id=?");
-            $stmtDep->execute([($candidature["departement"] + 1)]);
-            $candidatureAInsert["departement"] = $stmtDep->fetchColumn();
+            if ($candidature["departement"] == "999") $candidatureAInsert["departement"] = "Autre";
+            else {
+                $stmtDep = $BDD->prepare("SELECT departement_nom FROM departement WHERE departement_id=?");
+                $stmtDep->execute([($candidature["departement"] + 1)]);
+                $candidatureAInsert["departement"] = $stmtDep->fetchColumn();
+            }
         }
 
         // Présentation du groupe

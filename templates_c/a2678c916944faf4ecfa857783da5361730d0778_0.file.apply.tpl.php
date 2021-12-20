@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-12-19 20:44:34
+/* Smarty version 3.1.34-dev-7, created on 2021-12-20 11:14:25
   from 'C:\laragon\M3104\PROJET_WEB\templates\apply.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_61bf99b2665ee9_94059577',
+  'unifunc' => 'content_61c0659171db05_94959215',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a2678c916944faf4ecfa857783da5361730d0778' => 
     array (
       0 => 'C:\\laragon\\M3104\\PROJET_WEB\\templates\\apply.tpl',
-      1 => 1639946670,
+      1 => 1639998847,
       2 => 'file',
     ),
   ),
@@ -20,26 +20,26 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_61bf99b2665ee9_94059577 (Smarty_Internal_Template $_smarty_tpl) {
+function content_61c0659171db05_94959215 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_92957068861bf99b261b5f6_31187250', 'title');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_74621125761c065916b9626_54902465', 'title');
 ?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_89489999661bf99b261c228_09646592', 'body');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_119434789561c065916bafd7_23210765', 'body');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, 'layout.tpl');
 }
 /* {block 'title'} */
-class Block_92957068861bf99b261b5f6_31187250 extends Smarty_Internal_Block
+class Block_74621125761c065916b9626_54902465 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'title' => 
   array (
-    0 => 'Block_92957068861bf99b261b5f6_31187250',
+    0 => 'Block_74621125761c065916b9626_54902465',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -49,12 +49,12 @@ Candidater<?php
 }
 /* {/block 'title'} */
 /* {block 'body'} */
-class Block_89489999661bf99b261c228_09646592 extends Smarty_Internal_Block
+class Block_119434789561c065916bafd7_23210765 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'body' => 
   array (
-    0 => 'Block_89489999661bf99b261c228_09646592',
+    0 => 'Block_119434789561c065916bafd7_23210765',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -217,7 +217,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             <b>Département :</b>
             <select name="departement" id="departement">
                 <option value="" selected disabled hidden>Sélectionnez un département</option>
-                <option value="0" <?php if ((!empty($_smarty_tpl->tpl_vars['candidature']->value['departement'])) && ($_smarty_tpl->tpl_vars['candidature']->value['departement'] == "0")) {?> selected <?php }?>>Autre</option>
+                <option value="999" <?php if ((!empty($_smarty_tpl->tpl_vars['candidature']->value['departement'])) && ($_smarty_tpl->tpl_vars['candidature']->value['departement'] == "999")) {?> selected <?php }?>>Autre</option>
                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['utils']->value['departement'], 'departement', false, 'numero');
 $_smarty_tpl->tpl_vars['departement']->do_else = true;

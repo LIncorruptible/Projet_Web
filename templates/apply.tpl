@@ -98,7 +98,7 @@
             <b>Département :</b>
             <select name="departement" id="departement">
                 <option value="" selected disabled hidden>Sélectionnez un département</option>
-                <option value="0" {if (!empty($candidature.departement)) && ($candidature.departement == "0")} selected {/if}>Autre</option>
+                <option value="999" {if (!empty($candidature.departement)) && ($candidature.departement == "999")} selected {/if}>Autre</option>
                 {foreach from=$utils['departement'] key=$numero item=$departement}
                     {foreach from=$departement['departement_nom'] item=$nom}
                         {foreach from=$departement['departement_code'] item=$code}

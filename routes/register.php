@@ -83,7 +83,7 @@
             $message['code_postal'] = "Veuillez remplir le champ code postal";
         }
         else {
-            if(!$chiffre || strlen($code_postal) != 5 || strlen($code_postal) != 6){
+            if(!$chiffre || strlen($code_postal) != 5 && strlen($code_postal) != 6){
                 $message['erreur_code_postal'] = "Le code postal est incorrect";
             }
         }
