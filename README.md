@@ -1,5 +1,7 @@
 # Projet-Festival
 
+*À noter : Les packages Flight et Smarty sont inclues au dossier `includes`*
+
 ## _Connexion à la base de données_
 
 Il faut dans notre cas importer le fichier `projet_web.sql`situer dans le dossier `bdd`, vers ***phpmyadmin*** et renseigner le `root` et `mdp` dans le fichier `pdo.php` situé à la racine du dossier :
