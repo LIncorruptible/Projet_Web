@@ -7,7 +7,7 @@
 ##### Connexion via le role Administrateur :
 
 * @email : `rickastley@gmail.com`
-* #mdp : `root123456`
+* #mdp : `Root123456`
 
 ##### Inscription en tant que Responsable
 
